@@ -1,0 +1,27 @@
+{
+  "id": "<elastic.co/>_1038559709566344",
+  "caption": "github.com",
+  "created_time": "2016-07-15T02:15:08+0000",
+  "description": "Hi @kasinath , I think we are supporting some features as AUTO_COLOR_CORRELOGRAM, BINARY_PATTERNS_PYRAMID, CEDD..... But this plugin is not supports Feature Sift/surf. So could you instruct me how ...",
+  "from": {
+    "name": "Long Tran",
+    "id": "<Long Tran/>"
+  },
+  "icon": "https://www.facebook.com/images/icons/post.gif",
+  "is_hidden": false,
+  "is_published": true,
+  "message": "can anyone help me to solve this issue ?\n\n1. https://github.com/usc-isi-i2/elasticsearch-image-features/issues/3#issuecomment-230841081\n2. https://github.com/kiwionly/elasticsearch-image/issues\n3.https://github.com/usc-isi-i2/elasticsearch-image-features/issues",
+  "name": "Local Descriptors SIFT/SURF · Issue #3 · usc-isi-i2/elasticsearch-image-features",
+  "picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBEUyWSjKF0C1ux&w=130&h=130&url=https%3A%2F%2Favatars0.githubusercontent.com%2Fu%2F2859031%3Fv%3D3%26s%3D400&cfs=1",
+  "status_type": "shared_story",
+  "type": "link",
+  "updated_time": "2016-07-21T04:24:12+0000",
+  "to": {
+    "data": [
+      {
+        "id": "<elastic.co/>",
+        "name": "Elastic"
+      }
+    ]
+  }
+}

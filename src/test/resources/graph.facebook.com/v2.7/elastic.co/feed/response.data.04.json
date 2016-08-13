@@ -1,0 +1,15 @@
+{
+  "id": "<elastic.co/>_10154250346005155",
+  "created_time": "2016-08-09T13:12:57+0000",
+  "from": {
+    "name": "Elastic",
+    "id": "<elastic.co/>"
+  },
+  "is_hidden": false,
+  "is_published": true,
+  "message": "Get 15% off if you register now for our #Elasticsearch October training offerings & learn how to make your data useable in real time. This offer expires August 19. http://training.elastic.co/",
+  "status_type": "shared_story",
+  "story": "Elastic shared an offer.",
+  "type": "status",
+  "updated_time": "2016-08-11T10:41:30+0000"
+}

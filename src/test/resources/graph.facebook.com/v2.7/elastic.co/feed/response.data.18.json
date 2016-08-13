@@ -1,0 +1,36 @@
+{
+  "id": "<elastic.co/>_10154198841080155",
+  "created_time": "2016-07-20T15:05:11+0000",
+  "description": "For our third installment of Pubforge Presentations, we invited Elastic tech lead Court Ewing to come present on the dynamic open source toolbox that is the ElasticStack. There was hardly an extra seat in the house!",
+  "from": {
+    "name": "Industrial Resolution",
+    "id": "<Industrial Resolution/>"
+  },
+  "is_hidden": false,
+  "is_published": true,
+  "message": "Thanks to everyone who came out to the 3rd installment of Pubforge Presentations on Monday. And a big thanks to our good friend Court for giving a great presentation on the Elastic Stack. Here are some photos from the night...",
+  "message_tags": [
+    {
+      "id": "<Pubforge/>",
+      "name": "Pubforge",
+      "type": "page",
+      "offset": 58,
+      "length": 8
+    },
+    {
+      "id": "<elastic.co/>",
+      "name": "Elastic",
+      "type": "page",
+      "offset": 173,
+      "length": 7
+    }
+  ],
+  "name": "Pubforge",
+  "object_id": "1765817223634748",
+  "parent_id": "<Pubforge/>_1765817153634755",
+  "picture": "https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/13775615_1765817223634748_6722784686320460587_n.jpg?oh=de2a7656f158d03c46e24bc203eb2f79&oe=58185EFA",
+  "status_type": "shared_story",
+  "story": "Industrial Resolution shared Pubforge's album.",
+  "type": "photo",
+  "updated_time": "2016-07-20T15:05:44+0000"
+}
