@@ -34,6 +34,7 @@
 		<java.version>1.8</java.version>
 		<elasticsearch.version>5.1.2</elasticsearch.version>
 		<log4j2.version>2.7</log4j2.version>
+		<jacoco.version>0.7.8</jacoco.version>
 	</properties>
 
 	<dependencyManagement>
@@ -142,6 +143,35 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco.version}</version>
+				<executions>
+					<execution>
+						<id>default-prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+						<configuration>
+							<propertyName>surefireArgLine</propertyName>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<excludes>
+						<exclude>**/facebook/api/**</exclude>
+						<!-- <exclude>**/facebook/databind/jackson/**MixIn</exclude> -->
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<configuration>
+					<argLine>${surefireArgLine}</argLine>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
