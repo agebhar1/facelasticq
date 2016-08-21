@@ -19,6 +19,9 @@ package com.github.agebhar1.facelasticq.facebook.api;
 import java.time.Instant;
 import java.util.Map;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import lombok.Builder;
 import lombok.Singular;
 import lombok.Value;
@@ -65,6 +68,8 @@ public class Post {
 	/**
 	 * The post ID
 	 */
+	@NotNull
+	@Size(min = 1, max = 5, message = "The id '${validatedValue}' must be between {min} and {max} characters long")
 	String id;
 	
 	/**
