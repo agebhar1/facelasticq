@@ -1,0 +1,10 @@
+  ${Ansi.BRIGHT_CYAN}     ______            _${Ansi.BRIGHT_WHITE}_______           __  _ __________ 
+  ${Ansi.BRIGHT_CYAN}    / ____/___ ______ / ${Ansi.BRIGHT_WHITE}____/ /___ ______/ /_(_) ____/ __ \
+  ${Ansi.BRIGHT_CYAN}   / /_  / __ `/ ___// _${Ansi.BRIGHT_WHITE}_/ / / __ `/ ___/ __/ / /   / / / /
+  ${Ansi.BRIGHT_CYAN}  / __/ / /_/ / /__ / /_${Ansi.BRIGHT_WHITE}__/ / /_/ (__  ) /_/ / /___/ /_/ / 
+  ${Ansi.BRIGHT_CYAN} /_/    \__,_/\___//____${Ansi.BRIGHT_WHITE}_/_/\__,_/____/\__/_/\____/\___\_\ 
+  ${Ansi.BRIGHT_CYAN}________________________${Ansi.BRIGHT_WHITE}___________________________________
+  ${Ansi.BRIGHT_CYAN}========================${Ansi.BRIGHT_WHITE}===================================
+  ${Ansi.WHITE}
+  ${Ansi.BRIGHT_CYAN}:: Spring Boot ::       ${Ansi.BRIGHT_WHITE}${spring-boot.formatted-version}
+  ${Ansi.WHITE}
