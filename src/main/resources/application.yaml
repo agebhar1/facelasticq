@@ -1,0 +1,11 @@
+facelasticq:
+    service:
+          
+      elasticsearch:
+        path:
+          home: 
+        node:
+          name: facebook-node-1
+        http:
+          enabled: false
+          port: 9200
