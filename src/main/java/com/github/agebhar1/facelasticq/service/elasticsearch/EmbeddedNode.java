@@ -16,12 +16,14 @@
  */
 package com.github.agebhar1.facelasticq.service.elasticsearch;
 
+import static com.github.agebhar1.facelasticq.service.elasticsearch.Utils.waitForYellowStatus;
 import static org.elasticsearch.common.settings.Settings.settingsBuilder;
 import static org.elasticsearch.node.NodeBuilder.nodeBuilder;
 
 import java.io.Closeable;
 import java.io.IOException;
 
+import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.node.Node;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,14 +36,6 @@ public class EmbeddedNode implements Closeable {
 	private final static Logger logger = LoggerFactory.getLogger(EmbeddedNode.class);
 
 	private final Node node;
-	
-	/*
-	 *  http://stackoverflow.com/questions/27603570/elasticsearch-noshardavailableactionexception-after-startup
-	 */
-	private static void waitForYellowStatus(final Node node) {
-		logger.info("Wait for Elasticsearch Yellow node status.");
-		node.client().admin().cluster().prepareHealth().setWaitForYellowStatus().execute().actionGet(5000);		
-	}
 	
 	@Autowired
 	public EmbeddedNode(final ElasticsearchConfiguration config) {
@@ -63,7 +57,7 @@ public class EmbeddedNode implements Closeable {
 				.data(true)
 				.node();
 		
-		waitForYellowStatus(node);
+		waitForYellowStatus(node, new TimeValue(5000));
 		
 	}
 
