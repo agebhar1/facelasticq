@@ -29,9 +29,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FacebookNode implements Closeable {
+public class EmbeddedNode implements Closeable {
 	
-	private final static Logger logger = LoggerFactory.getLogger(FacebookNode.class);
+	private final static Logger logger = LoggerFactory.getLogger(EmbeddedNode.class);
 
 	private final Node node;
 	
@@ -44,7 +44,7 @@ public class FacebookNode implements Closeable {
 	}
 	
 	@Autowired
-	public FacebookNode(final ElasticsearchConfiguration config) {
+	public EmbeddedNode(final ElasticsearchConfiguration config) {
 		
 		logger.info("Create instance of class '{}' with {}.", getClass().getCanonicalName(), config);
 		

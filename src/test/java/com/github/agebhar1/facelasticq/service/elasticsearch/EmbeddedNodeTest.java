@@ -36,7 +36,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-public class FacebookNodeTest {
+public class EmbeddedNodeTest {
 	
 	@Rule
 	public TemporaryFolder folder = new TemporaryFolder();
@@ -63,7 +63,7 @@ public class FacebookNodeTest {
 		final String name = UUID.randomUUID().toString();
 		node.setName(name);
 		
-		final FacebookNode fbNode = new FacebookNode(config);
+		final EmbeddedNode embeddedNode = new EmbeddedNode(config);
 		
 		final RestTemplate template = new RestTemplate();
 		
@@ -89,7 +89,7 @@ public class FacebookNodeTest {
 		assertThat(response.getStatusCode(), is(equalTo(OK)));
 		assertEquals(expected, actual, true);
 		
-		fbNode.close();
+		embeddedNode.close();
 		
 	}
 
