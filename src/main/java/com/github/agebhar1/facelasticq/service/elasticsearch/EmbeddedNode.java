@@ -33,6 +33,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.github.agebhar1.facelasticq.service.elasticsearch.index.IndexConfiguration;
+
 @Service
 public class EmbeddedNode implements Closeable {
 	
@@ -76,6 +78,15 @@ public class EmbeddedNode implements Closeable {
 		node.start();
 		
 		waitForYellowStatus(node, new TimeValue(5000));
+		
+	}
+	
+	public <T extends IndexConfiguration> T ensure(final T index) {
+
+		index.apply(node.client());
+		waitForYellowStatus(node, new TimeValue(5000));
+		
+		return index;
 		
 	}
 

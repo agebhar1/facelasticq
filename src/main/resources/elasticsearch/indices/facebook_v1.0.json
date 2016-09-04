@@ -1,0 +1,119 @@
+{
+	"aliases": {
+		"facebook": {
+			
+		}
+	},
+	"mappings": {
+		"post": {
+			"properties": {
+				"caption": {
+					"enabled": false
+				},
+				"created_time": {
+					"type": "date",
+					"format": "strict_date_optional_time||epoch_millis"
+				},
+				"description": {
+					"type": "string"
+				},
+				"from": {
+					"properties": {
+						"id": {
+							"type": "string",
+							"index": "not_analyzed"
+						},
+						"name": {
+							"enabled": false
+						}
+					}
+				},
+				"icon": {
+					"type": "string"
+				},
+				"id": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"is_hidden": {
+					"type": "boolean"
+				},
+				"is_published": {
+					"type": "boolean"
+				},
+				"message": {
+					"type": "string"
+				},
+				"message_tags": {
+					"enabled": false
+				},
+				"name": {
+					"enabled": false
+				},
+				"object_id": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"parent_id": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"picture": {
+					"enabled": false
+				},
+				"properties": {
+					"enabled": false
+				},
+				"shares": {
+					"enabled": false
+				},
+				"source": {
+					"enabled": false
+				},
+				"status_type": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"story": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"to": {
+					"properties": {
+						"data": {
+							"properties": {
+								"id": {
+									"type": "string",
+									"index": "not_analyzed"
+								},
+								"name": {
+									"enabled": false
+								}
+							}
+						}
+					}
+				},
+				"type": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"updated_time": {
+					"type": "date",
+					"format": "strict_date_optional_time||epoch_millis"
+				},
+				"with_tags": {
+					"enabled": false
+				}
+			}
+		}
+	},
+	"settings": {
+		"index": {
+			"number_of_shards": "5",
+			"number_of_replicas": "1"
+		}
+	},
+	"warmers": {
+		
+	}
+}
