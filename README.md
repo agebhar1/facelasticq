@@ -16,10 +16,12 @@ limitations under the License.
 -->
 # FacElastiCQ
 
-[![Build Status][ti]][tl] [![Apache License][li]][ll]
+[![Apache License][li]][ll] [![Build Status][ti]][tl] [![Codacy Badge][ci]][cl]
 
 A box to cache and query Facebook post(s) powered by [Elasticsearch](https://www.elastic.co/products/elasticsearch).
 
+[ci]: https://api.codacy.com/project/badge/Grade/d92c434ff9ee4aa9b5ca14c3fa4b2f0c
+[cl]: https://www.codacy.com/app/agebhar1/facelasticq?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=agebhar1/facelasticq&amp;utm_campaign=Badge_Grade
 [ti]: https://travis-ci.org/agebhar1/facelasticq.svg?branch=master
 [tl]: https://travis-ci.org/agebhar1/facelasticq
 [li]: https://img.shields.io/badge/license-ASL-blue.svg
