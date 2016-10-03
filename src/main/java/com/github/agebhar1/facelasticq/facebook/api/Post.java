@@ -19,22 +19,15 @@ package com.github.agebhar1.facelasticq.facebook.api;
 import java.time.Instant;
 import java.util.Map;
 
-import lombok.Builder;
-import lombok.Singular;
-import lombok.Value;
+import javax.annotation.Nullable;
 
-/**
- * 
- * A lightweight model for a Facebook post object.
- * 
- * @see https://developers.facebook.com/docs/graph-api/reference/v2.7/post/
- *
- */
+import org.immutables.value.Value.Immutable;
+import org.immutables.value.Value.Style;
 
-@Value
-@Builder
-public class Post {
-	
+@Immutable
+@Style(depluralize = true)
+public abstract class Post {
+
 	public enum StatusType {
 		
 		mobile_status_update, 
@@ -65,60 +58,67 @@ public class Post {
 	/**
 	 * The post ID
 	 */
-	String id;
+	public abstract String getId();
 	
 	/**
 	 * The caption of a link in the post (appears 
 	 * beneath the name). 
 	 */
-	String caption;
+	@Nullable 
+	public abstract String getCaption();
 	
 	/**
 	 * The time the post was initially published. 
 	 * For a post about a life event, this will 
 	 * be the date and time of the life event
 	 */
-	Instant createdTime;
+	public abstract Instant getCreatedTime();
 	
 	/**
 	 * A description of a link in the post (appears 
 	 * beneath the caption).
 	 */
-	String description;
+	@Nullable 
+	public abstract String getDescription();
 	
 	/**
 	 * Information about the profile that posted 
 	 * the message.
 	 * 
 	 */
-	Profile from;
+	public abstract Profile getFrom();
 	
 	/**
 	 * A link to an icon representing the type of 
 	 * this post.
 	 */
-	String icon;
+	@Nullable 
+	public abstract String getIcon();
 	
 	/**
 	 * The link attached to this post.
 	 */
-	String link;
+	@Nullable 
+	public abstract String getLink();
 	
 	/**
 	 * The status message in the post.
 	 */
-	String message;
+	@Nullable 
+	public abstract String getMessage();
 	
 	/**
 	 * The name of the link.
 	 */
-	String name;
+	@Nullable 
+	public abstract String getName();
 	
 	/**
 	 * The ID of any uploaded photo or video attached
 	 * to the post.
 	 */
-	String objectId;
+	@Nullable 
+	public abstract String getObjectId();
 	
 	/**
 	 * The ID of a parent post for this post, if it 
@@ -127,23 +127,27 @@ public class Post {
 	 * parent_id will be the original post where the 
 	 * mention happened
 	 */
-	String parentId;
+	@Nullable 
+	public abstract String getParentId();
 	
 	/**
 	 * The picture scraped from any link included 
 	 * with the post.
 	 */
-	String picture;
+	@Nullable 
+	public abstract String getPicture();
 	
 	/**
 	 * Any location information attached to the post.
 	 */
-	String place;
+	@Nullable 
+	public abstract String getPlace();
 	
 	/**
 	 * Description of the type of a status update.
 	 */
-	StatusType statusType;
+	@Nullable 
+	public abstract StatusType getStatusType();
 	
 	/**
 	 * Text from stories not intentionally generated 
@@ -151,13 +155,14 @@ public class Post {
 	 * people become friends, or when someone else 
 	 * posts on the person's wall.
 	 */
-	String story;
+	@Nullable 
+	public abstract String getStory();
 	
 	/**
 	 * A string indicating the object type of this 
 	 * post.
 	 */
-	Type type;
+	public abstract Type getType();
 	
 	/**
 	 * The time when the post was created, last 
@@ -167,11 +172,11 @@ public class Post {
 	 * For a post about a life event, this will be 
 	 * the date and time of the life event
 	 */
-	Instant updatedTime;
+	public abstract Instant getUpdatedTime();
 		
 	/**
 	 * anything else
 	 */
-	@Singular Map<String, Object> jsonProperties;
-
+	public abstract Map<String, Object> getJsonProperties();	
+	
 }

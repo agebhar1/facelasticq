@@ -16,23 +16,23 @@
  */
 package com.github.agebhar1.facelasticq.facebook.databind.jackson;
 
-import java.util.Map;
-
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy.SnakeCaseStrategy;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import com.github.agebhar1.facelasticq.facebook.api.ImmutablePost;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
-@JsonDeserialize(builder = ImmutablePost.Builder.class)
-@JsonInclude(JsonInclude.Include.NON_EMPTY)
-@JsonNaming(SnakeCaseStrategy.class)
-public final class PostMixIn {
+public final class ImmutablePostMixIn {
+	
+	@JsonPOJOBuilder(withPrefix = "")
+	@JsonNaming(SnakeCaseStrategy.class)
+	@JsonIgnoreProperties(ignoreUnknown = true)
+	public final class Builder {
 
-	@JsonAnyGetter
-	public Map<String, Object> getJsonProperties() {
-		return null;
+		@JsonAnySetter
+		public void putJsonProperty(String key, Object value) {
+		}
+		
 	}
 
 }
