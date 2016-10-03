@@ -31,6 +31,7 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.github.agebhar1.facelasticq.facebook.api.ImmutablePost;
+import com.github.agebhar1.facelasticq.facebook.api.ImmutableProfile;
 import com.github.agebhar1.facelasticq.facebook.api.Post;
 import com.github.agebhar1.facelasticq.facebook.api.Profile;
 
@@ -48,7 +49,7 @@ public final class FacebookModule extends SimpleModule {
 		 * Profile
 		 */
 		context.setMixInAnnotations(Profile.class, ProfileMixIn.class);
-		context.setMixInAnnotations(Profile.ProfileBuilder.class, ProfileMixIn.ProfileBuilderMixIn.class);
+		context.setMixInAnnotations(ImmutableProfile.Builder.class, ImmutableProfileMixIn.Builder.class);
 		/*
 		 * Post
 		 */

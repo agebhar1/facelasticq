@@ -16,18 +16,20 @@
  */
 package com.github.agebhar1.facelasticq.facebook.databind.jackson;
 
-import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.github.agebhar1.facelasticq.facebook.api.ImmutableProfile;
+public final class ImmutableProfileMixIn {
 
-@JsonDeserialize(builder = ImmutableProfile.Builder.class)
-public final class ProfileMixIn {
+	@JsonPOJOBuilder(withPrefix = "")
+	@JsonIgnoreProperties(ignoreUnknown = true)
+	public final class Builder {
 
-	@JsonAnyGetter
-	public Map<String, Object> getJsonProperties() {
-		return null;
+		@JsonAnySetter
+		public void putJsonProperty(String key, Object value) {
+		}
+		
 	}
-
+	
 }
