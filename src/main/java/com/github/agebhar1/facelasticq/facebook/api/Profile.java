@@ -18,9 +18,8 @@ package com.github.agebhar1.facelasticq.facebook.api;
 
 import java.util.Map;
 
-import lombok.Builder;
-import lombok.Singular;
-import lombok.Value;
+import org.immutables.value.Value.Immutable;
+import org.immutables.value.Value.Style;
 
 /**
  * 
@@ -37,25 +36,25 @@ import lombok.Value;
  *
  */
 
-@Value
-@Builder
-public class Profile {
+@Immutable
+@Style(depluralize = true)
+public abstract class Profile {
 	
 	/**
 	 * The profile ID, each of User, Page, Group
 	 * Event or Application has one.
 	 */
-	String id;
+	public abstract String getId();
 	
 	/**
 	 * The name of either User, Page, Group,
 	 * Event or Application.
 	 */
-	String name;
+	public abstract String getName();
 	
 	/**
 	 * anything else
 	 */
-	@Singular Map<String, Object> jsonProperties;	
+	public abstract Map<String, Object> getJsonProperties();	
 
 }
