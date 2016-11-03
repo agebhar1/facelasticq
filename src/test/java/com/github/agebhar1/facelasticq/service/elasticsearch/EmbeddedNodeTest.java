@@ -27,6 +27,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
 
+import org.elasticsearch.node.NodeValidationException;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -42,7 +43,7 @@ public class EmbeddedNodeTest {
 	public TemporaryFolder folder = new TemporaryFolder();
 	
 	@Test
-	public void elasticsearch_is_running() throws IOException {
+	public void elasticsearch_is_running() throws IOException, NodeValidationException {
 		
 		final File home = folder.newFolder();
 		
@@ -74,11 +75,11 @@ public class EmbeddedNodeTest {
 				+ "  'name': '%s',"
 				+ "  'cluster_name':'elasticsearch',"
 				+ "  'version': {"
-				+ "    'number': '2.4.0',"
-				+ "    'build_hash': 'ce9f0c7394dee074091dd1bc4e9469251181fc55',"
-				+ "    'build_timestamp': '2016-08-29T09:14:17Z',"
+				+ "    'number': '5.0.0',"
+				+ "    'build_hash': '253032b',"
+				+ "    'build_date': '2016-10-26T04:37:51.531Z',"
 				+ "    'build_snapshot': false,"
-				+ "    'lucene_version': '5.5.2'"
+				+ "    'lucene_version': '6.2.0'"
 				+ "  },"
 				+ "  'tagline': 'You Know, for Search'"
 				+ "}", name)
@@ -87,7 +88,7 @@ public class EmbeddedNodeTest {
 		final String actual = response.getBody().toString();
 		
 		assertThat(response.getStatusCode(), is(equalTo(OK)));
-		assertEquals(expected, actual, true);
+		assertEquals(expected, actual, false);
 		
 		embeddedNode.close();
 		
