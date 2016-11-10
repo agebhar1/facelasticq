@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import org.apache.commons.io.IOUtils;
+import org.json.JSONException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -72,7 +73,7 @@ public class FacebookModuleTest {
 	}
 	
 	@Test
-	public void deserialization_serialization_round_trip() throws JsonParseException, JsonMappingException, IOException {
+	public void deserialization_serialization_round_trip() throws JsonParseException, JsonMappingException, IOException, JSONException {
 
 		final ObjectMapper mapper = new ObjectMapper();
 

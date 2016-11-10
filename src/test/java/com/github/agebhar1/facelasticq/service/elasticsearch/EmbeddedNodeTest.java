@@ -28,6 +28,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 import org.elasticsearch.node.NodeValidationException;
+import org.json.JSONException;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -43,7 +44,7 @@ public class EmbeddedNodeTest {
 	public TemporaryFolder folder = new TemporaryFolder();
 	
 	@Test
-	public void elasticsearch_is_running() throws IOException, NodeValidationException {
+	public void elasticsearch_is_running() throws IOException, NodeValidationException, JSONException {
 		
 		final File home = folder.newFolder();
 		
