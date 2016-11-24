@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016 Andreas Gebhardt
+ * Copyright (c) 2016-2017 Andreas Gebhardt
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -75,11 +75,11 @@ public class EmbeddedNodeTest {
 				+ "  'name': '%s',"
 				+ "  'cluster_name':'elasticsearch',"
 				+ "  'version': {"
-				+ "    'number': '5.0.0',"
-				+ "    'build_hash': '253032b',"
-				+ "    'build_date': '2016-10-26T04:37:51.531Z',"
+				+ "    'number': '5.1.2',"
+				+ "    'build_hash': 'c8c4c16',"
+				+ "    'build_date': '2017-01-11T20:18:39.146Z',"
 				+ "    'build_snapshot': false,"
-				+ "    'lucene_version': '6.2.0'"
+				+ "    'lucene_version': '6.3.0'"
 				+ "  },"
 				+ "  'tagline': 'You Know, for Search'"
 				+ "}", name)

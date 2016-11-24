@@ -65,7 +65,7 @@ public class EmbeddedNode implements Closeable {
 				.put("http.enabled", config.getHttp().isEnabled())
 				.put("http.port", config.getHttp().getPort())
 				.put("transport.type", "local")
-				.put("discovery.type", "local")
+				.put("discovery.type", "zen")
 				.put("node.name", config.getNode().getName())
 				.put("node.master", true)
 				.put("node.data", true)
