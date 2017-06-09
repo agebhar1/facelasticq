@@ -10,4 +10,4 @@ addons:
       - brew
 
 script:
-  - ./mvnw clean test org.owasp:dependency-check-maven:check jacoco:report sonar:sonar coveralls:report
+  - ./mvnw clean test org.owasp:dependency-check-maven:check jacoco:report sonar:sonar
